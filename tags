@@ -12,11 +12,17 @@ NUserDao	src/springbook/user/dao/NUserDao.java	/^public class NUserDao extends U
 Run	src/springbook/Run.java	/^public class Run {$/;"	c
 SimpleConnectionMaker	src/springbook/user/dao/SimpleConnectionMaker.java	/^public class SimpleConnectionMaker {$/;"	c
 User	src/springbook/user/domain/User.java	/^public class User {$/;"	c
-UserDao	src/springbook/user/dao/UserDao.java	/^	public UserDao(){$/;"	m	class:UserDao
+UserDao	src/springbook/user/dao/UserDao.java	/^	public UserDao(ConnectionMaker connectionMaker){$/;"	m	class:UserDao
 UserDao	src/springbook/user/dao/UserDao.java	/^public class UserDao {$/;"	c
+UserDao	src/springbook/user/dao/UserDaoTest.java	/^	public UserDao(ConnectionMaker connectionMaker){$/;"	m	class:UserDaoTest
+UserDaoTest	src/springbook/UserDaoTest.java	/^public class UserDaoTest {$/;"	c
+UserDaoTest	src/springbook/user/dao/UserDaoTest.java	/^public class UserDaoTest {$/;"	c
 add	src/springbook/user/dao/UserDao.java	/^	public void add(User user) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
+add	src/springbook/user/dao/UserDaoTest.java	/^	public void add(User user) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDaoTest
 connectionMaker	src/springbook/user/dao/UserDao.java	/^	private ConnectionMaker connectionMaker;$/;"	f	class:UserDao	file:
+connectionMaker	src/springbook/user/dao/UserDaoTest.java	/^	private ConnectionMaker connectionMaker;$/;"	f	class:UserDaoTest	file:
 get	src/springbook/user/dao/UserDao.java	/^	public User get(String id) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
+get	src/springbook/user/dao/UserDaoTest.java	/^	public User get(String id) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDaoTest
 getConnection	src/springbook/user/dao/DUserDao.java	/^	public Connection getConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:DUserDao
 getConnection	src/springbook/user/dao/NUserDao.java	/^	public Connection getConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:NUserDao
 getId	src/springbook/user/domain/User.java	/^	public String getId() {$/;"	m	class:User
@@ -24,6 +30,7 @@ getName	src/springbook/user/domain/User.java	/^	public String getName() {$/;"	m	
 getPassword	src/springbook/user/domain/User.java	/^	public String getPassword() {$/;"	m	class:User
 id	src/springbook/user/domain/User.java	/^	String id;$/;"	f	class:User
 main	src/springbook/Run.java	/^	public static void main(String[] args) throws ClassNotFoundException,SQLException {$/;"	m	class:Run
+main	src/springbook/UserDaoTest.java	/^	public static void main(String[] args) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDaoTest
 makeConnection	src/springbook/user/dao/ConnectionMaker.java	/^	public Connection makeConnection() throws ClassNotFoundException,SQLException;$/;"	m	interface:ConnectionMaker
 makeConnection	src/springbook/user/dao/DConnectionMaker.java	/^	public Connection makeConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:DConnectionMaker
 makeConnection	src/springbook/user/dao/NConnectionMaker.java	/^	public Connection makeConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:NConnectionMaker
@@ -34,6 +41,7 @@ setId	src/springbook/user/domain/User.java	/^	public void setId(String id) {$/;"
 setName	src/springbook/user/domain/User.java	/^	public void setName(String name) {$/;"	m	class:User
 setPassword	src/springbook/user/domain/User.java	/^	public void setPassword(String password) {$/;"	m	class:User
 springbook	src/springbook/Run.java	/^package springbook;$/;"	p
+springbook	src/springbook/UserDaoTest.java	/^package springbook;$/;"	p
 springbook.user.dao	src/springbook/user/dao/ConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/DConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/DUserDao.java	/^package springbook.user.dao;$/;"	p
@@ -41,6 +49,7 @@ springbook.user.dao	src/springbook/user/dao/NConnectionMaker.java	/^package spri
 springbook.user.dao	src/springbook/user/dao/NUserDao.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/SimpleConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/UserDao.java	/^package springbook.user.dao;$/;"	p
+springbook.user.dao	src/springbook/user/dao/UserDaoTest.java	/^package springbook.user.dao;$/;"	p
 springbook.user.domain	src/springbook/user/domain/User.java	/^package springbook.user.domain;$/;"	p
 users	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	t
 users.id	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	F
