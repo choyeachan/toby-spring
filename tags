@@ -22,3 +22,7 @@ setPassword	src/springbook/user/domain/User.java	/^	public void setPassword(Stri
 springbook	src/springbook/Run.java	/^package springbook;$/;"	p
 springbook.user.dao	src/springbook/user/dao/UserDao.java	/^package springbook.user.dao;$/;"	p
 springbook.user.domain	src/springbook/user/domain/User.java	/^package springbook.user.domain;$/;"	p
+users	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	t
+users.id	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	F
+users.name	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	F
+users.password	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	F
