@@ -2,7 +2,6 @@ package springbook;
 
 import java.sql.SQLException;
 
-import springbook.user.dao.NUserDao;
 import springbook.user.dao.UserDao;
 import springbook.user.domain.User;
 
