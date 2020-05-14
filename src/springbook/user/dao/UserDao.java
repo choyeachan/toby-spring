@@ -11,8 +11,7 @@ import springbook.user.domain.User;
 public class UserDao {
 
 	public void add(User user) throws ClassNotFoundException,SQLException {
-		Class.forName("org.mariadb.jdbc.Driver");
-		Connection c = DriverManager.getConnection("jdbc:mariadb://localhost/springbook","root","depth1004");
+		Connection c = getConnection();
 
 		PreparedStatement ps =c.prepareStatement("insert into users (id, name, password) values (?,?,?)");
 
@@ -28,8 +27,7 @@ public class UserDao {
 
 	public User get(String id) throws ClassNotFoundException,SQLException {
 
-		Class.forName("org.mariadb.jdbc.Driver");
-		Connection c = DriverManager.getConnection("jdbc:mariadb://localhost/springbook","root","depth1004");
+		Connection c = getConnection();
 
 		PreparedStatement ps =c.prepareStatement("select * from users where id = ?");
 
@@ -48,6 +46,13 @@ public class UserDao {
 
 		return user;
 	}
+
+
+	public Connection getConnection() throws ClassNotFoundException,SQLException {
+		Class.forName("org.mariadb.jdbc.Driver");
+		Connection c = DriverManager.getConnection("jdbc:mariadb://localhost/springbook","root","depth1004");
+		return c;
+	}	
 
 
 }

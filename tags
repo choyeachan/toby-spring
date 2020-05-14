@@ -9,6 +9,7 @@ User	src/springbook/user/domain/User.java	/^public class User {$/;"	c
 UserDao	src/springbook/user/dao/UserDao.java	/^public class UserDao {$/;"	c
 add	src/springbook/user/dao/UserDao.java	/^	public void add(User user) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
 get	src/springbook/user/dao/UserDao.java	/^	public User get(String id) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
+getConnection	src/springbook/user/dao/UserDao.java	/^	public Connection getConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
 getId	src/springbook/user/domain/User.java	/^	public String getId() {$/;"	m	class:User
 getName	src/springbook/user/domain/User.java	/^	public String getName() {$/;"	m	class:User
 getPassword	src/springbook/user/domain/User.java	/^	public String getPassword() {$/;"	m	class:User
