@@ -7,26 +7,30 @@
 DUserDao	src/springbook/user/dao/DUserDao.java	/^public class DUserDao extends UserDao {$/;"	c
 NUserDao	src/springbook/user/dao/NUserDao.java	/^public class NUserDao extends UserDao {$/;"	c
 Run	src/springbook/Run.java	/^public class Run {$/;"	c
+SimpleConnectionMaker	src/springbook/user/dao/SimpleConnectionMaker.java	/^public class SimpleConnectionMaker {$/;"	c
 User	src/springbook/user/domain/User.java	/^public class User {$/;"	c
-UserDao	src/springbook/user/dao/UserDao.java	/^public abstract class UserDao {$/;"	c
+UserDao	src/springbook/user/dao/UserDao.java	/^	public UserDao(){$/;"	m	class:UserDao
+UserDao	src/springbook/user/dao/UserDao.java	/^public class UserDao {$/;"	c
 add	src/springbook/user/dao/UserDao.java	/^	public void add(User user) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
 get	src/springbook/user/dao/UserDao.java	/^	public User get(String id) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
 getConnection	src/springbook/user/dao/DUserDao.java	/^	public Connection getConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:DUserDao
 getConnection	src/springbook/user/dao/NUserDao.java	/^	public Connection getConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:NUserDao
-getConnection	src/springbook/user/dao/UserDao.java	/^	public abstract Connection getConnection() throws ClassNotFoundException,SQLException; $/;"	m	class:UserDao
 getId	src/springbook/user/domain/User.java	/^	public String getId() {$/;"	m	class:User
 getName	src/springbook/user/domain/User.java	/^	public String getName() {$/;"	m	class:User
 getPassword	src/springbook/user/domain/User.java	/^	public String getPassword() {$/;"	m	class:User
 id	src/springbook/user/domain/User.java	/^	String id;$/;"	f	class:User
 main	src/springbook/Run.java	/^	public static void main(String[] args) throws ClassNotFoundException,SQLException {$/;"	m	class:Run
+makeNewConnection	src/springbook/user/dao/SimpleConnectionMaker.java	/^	public Connection makeNewConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:SimpleConnectionMaker
 name	src/springbook/user/domain/User.java	/^	String name;$/;"	f	class:User
 password	src/springbook/user/domain/User.java	/^	String password;$/;"	f	class:User
 setId	src/springbook/user/domain/User.java	/^	public void setId(String id) {$/;"	m	class:User
 setName	src/springbook/user/domain/User.java	/^	public void setName(String name) {$/;"	m	class:User
 setPassword	src/springbook/user/domain/User.java	/^	public void setPassword(String password) {$/;"	m	class:User
+simpleConnectionMaker	src/springbook/user/dao/UserDao.java	/^	private SimpleConnectionMaker simpleConnectionMaker;$/;"	f	class:UserDao	file:
 springbook	src/springbook/Run.java	/^package springbook;$/;"	p
 springbook.user.dao	src/springbook/user/dao/DUserDao.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/NUserDao.java	/^package springbook.user.dao;$/;"	p
+springbook.user.dao	src/springbook/user/dao/SimpleConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/UserDao.java	/^package springbook.user.dao;$/;"	p
 springbook.user.domain	src/springbook/user/domain/User.java	/^package springbook.user.domain;$/;"	p
 users	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	t

@@ -10,7 +10,7 @@ public class Run {
 
 	public static void main(String[] args) throws ClassNotFoundException,SQLException {
 
-		UserDao dao = new NUserDao();
+		UserDao dao = new UserDao();
 
 		User user = new User();
 		user.setId("cyc");
