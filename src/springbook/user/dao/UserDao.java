@@ -1,14 +1,13 @@
 package springbook.user.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import springbook.user.domain.User;
 
-public class UserDao {
+public abstract class UserDao {
 
 	public void add(User user) throws ClassNotFoundException,SQLException {
 		Connection c = getConnection();
@@ -48,11 +47,7 @@ public class UserDao {
 	}
 
 
-	public Connection getConnection() throws ClassNotFoundException,SQLException {
-		Class.forName("org.mariadb.jdbc.Driver");
-		Connection c = DriverManager.getConnection("jdbc:mariadb://localhost/springbook","root","depth1004");
-		return c;
-	}	
+	public abstract Connection getConnection() throws ClassNotFoundException,SQLException; 
 
 
 }
