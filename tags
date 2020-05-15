@@ -6,6 +6,7 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ConnectionMaker	src/springbook/user/dao/ConnectionMaker.java	/^public interface ConnectionMaker {$/;"	i
 DConnectionMaker	src/springbook/user/dao/DConnectionMaker.java	/^public class DConnectionMaker implements ConnectionMaker{$/;"	c
+DaoFactory	src/springbook/user/dao/DaoFactory.java	/^public class DaoFactory {$/;"	c
 NConnectionMaker	src/springbook/user/dao/NConnectionMaker.java	/^public class NConnectionMaker implements ConnectionMaker{$/;"	c
 SimpleConnectionMaker	src/springbook/user/dao/SimpleConnectionMaker.java	/^public class SimpleConnectionMaker {$/;"	c
 User	src/springbook/user/domain/User.java	/^public class User {$/;"	c
@@ -32,10 +33,12 @@ setPassword	src/springbook/user/domain/User.java	/^	public void setPassword(Stri
 springbook	src/springbook/UserDaoTest.java	/^package springbook;$/;"	p
 springbook.user.dao	src/springbook/user/dao/ConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/DConnectionMaker.java	/^package springbook.user.dao;$/;"	p
+springbook.user.dao	src/springbook/user/dao/DaoFactory.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/NConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/SimpleConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/UserDao.java	/^package springbook.user.dao;$/;"	p
 springbook.user.domain	src/springbook/user/domain/User.java	/^package springbook.user.domain;$/;"	p
+userDao	src/springbook/user/dao/DaoFactory.java	/^	public UserDao userDao() {$/;"	m	class:DaoFactory
 users	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	t
 users.id	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	F
 users.name	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	F
