@@ -18,6 +18,11 @@ public class UserDaoTest {
 			new AnnotationConfigApplicationContext(DaoFactory.class);
 
 		UserDao dao = context.getBean("userDao",UserDao.class);
+		UserDao dao1 = context.getBean("userDao",UserDao.class);
+
+		System.out.println(dao);
+		System.out.println(dao1);
+		System.out.println(dao==dao1);
 
 		User user = new User();
 		user.setId("cyc");
