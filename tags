@@ -7,6 +7,9 @@
 AccountDao	src/springbook/user/dao/AccountDao.java	/^	public AccountDao(ConnectionMaker connectionMaker){$/;"	m	class:AccountDao
 AccountDao	src/springbook/user/dao/AccountDao.java	/^public class AccountDao {$/;"	c
 ConnectionMaker	src/springbook/user/dao/ConnectionMaker.java	/^public interface ConnectionMaker {$/;"	i
+CountingConnectionMaker	src/springbook/user/dao/CountingConnectionMaker.java	/^	public CountingConnectionMaker(ConnectionMaker realConnectionMaker){$/;"	m	class:CountingConnectionMaker
+CountingConnectionMaker	src/springbook/user/dao/CountingConnectionMaker.java	/^public class CountingConnectionMaker implements ConnectionMaker {$/;"	c
+CountingDaoFactory	src/springbook/user/dao/CountingDaoFactory.java	/^public class CountingDaoFactory {$/;"	c
 DConnectionMaker	src/springbook/user/dao/DConnectionMaker.java	/^public class DConnectionMaker implements ConnectionMaker{$/;"	c
 DaoFactory	src/springbook/user/dao/DaoFactory.java	/^public class DaoFactory {$/;"	c
 MessageDao	src/springbook/user/dao/MessageDao.java	/^	public MessageDao(ConnectionMaker connectionMaker){$/;"	m	class:MessageDao
@@ -22,17 +25,21 @@ add	src/springbook/user/dao/AccountDao.java	/^	public void add(User user) throws
 add	src/springbook/user/dao/MessageDao.java	/^	public void add(User user) throws ClassNotFoundException,SQLException {$/;"	m	class:MessageDao
 add	src/springbook/user/dao/UserDao.java	/^	public void add(User user) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
 connectionMaker	src/springbook/user/dao/AccountDao.java	/^	private ConnectionMaker connectionMaker;$/;"	f	class:AccountDao	file:
+connectionMaker	src/springbook/user/dao/CountingDaoFactory.java	/^	public ConnectionMaker connectionMaker(){$/;"	m	class:CountingDaoFactory
 connectionMaker	src/springbook/user/dao/DaoFactory.java	/^	public ConnectionMaker connectionMaker(){$/;"	m	class:DaoFactory
 connectionMaker	src/springbook/user/dao/MessageDao.java	/^	private ConnectionMaker connectionMaker;$/;"	f	class:MessageDao	file:
 connectionMaker	src/springbook/user/dao/UserDao.java	/^	private ConnectionMaker connectionMaker;$/;"	f	class:UserDao	file:
+counter	src/springbook/user/dao/CountingConnectionMaker.java	/^	int counter = 0;$/;"	f	class:CountingConnectionMaker
 get	src/springbook/user/dao/AccountDao.java	/^	public User get(String id) throws ClassNotFoundException,SQLException {$/;"	m	class:AccountDao
 get	src/springbook/user/dao/MessageDao.java	/^	public User get(String id) throws ClassNotFoundException,SQLException {$/;"	m	class:MessageDao
 get	src/springbook/user/dao/UserDao.java	/^	public User get(String id) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDao
+getCounter	src/springbook/user/dao/CountingConnectionMaker.java	/^	public int getCounter(){$/;"	m	class:CountingConnectionMaker
 getId	src/springbook/user/domain/User.java	/^	public String getId() {$/;"	m	class:User
 getName	src/springbook/user/domain/User.java	/^	public String getName() {$/;"	m	class:User
 getPassword	src/springbook/user/domain/User.java	/^	public String getPassword() {$/;"	m	class:User
 id	src/springbook/user/domain/User.java	/^	String id;$/;"	f	class:User
 main	src/springbook/UserDaoTest.java	/^	public static void main(String[] args) throws ClassNotFoundException,SQLException {$/;"	m	class:UserDaoTest
+makConnection	src/springbook/user/dao/CountingConnectionMaker.java	/^	public Connection makConnection() throws ClassNotFoundException, SQLException {$/;"	m	class:CountingConnectionMaker
 makeConnection	src/springbook/user/dao/ConnectionMaker.java	/^	public Connection makeConnection() throws ClassNotFoundException,SQLException;$/;"	m	interface:ConnectionMaker
 makeConnection	src/springbook/user/dao/DConnectionMaker.java	/^	public Connection makeConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:DConnectionMaker
 makeConnection	src/springbook/user/dao/NConnectionMaker.java	/^	public Connection makeConnection() throws ClassNotFoundException,SQLException {$/;"	m	class:NConnectionMaker
@@ -40,12 +47,16 @@ makeNewConnection	src/springbook/user/dao/SimpleConnectionMaker.java	/^	public C
 messageDao	src/springbook/user/dao/DaoFactory.java	/^	public MessageDao messageDao() {$/;"	m	class:DaoFactory
 name	src/springbook/user/domain/User.java	/^	String name;$/;"	f	class:User
 password	src/springbook/user/domain/User.java	/^	String password;$/;"	f	class:User
+realConnectionMaker	src/springbook/user/dao/CountingConnectionMaker.java	/^	private ConnectionMaker realConnectionMaker;$/;"	f	class:CountingConnectionMaker	file:
+realConnectionMaker	src/springbook/user/dao/CountingDaoFactory.java	/^	public ConnectionMaker realConnectionMaker() {$/;"	m	class:CountingDaoFactory
 setId	src/springbook/user/domain/User.java	/^	public void setId(String id) {$/;"	m	class:User
 setName	src/springbook/user/domain/User.java	/^	public void setName(String name) {$/;"	m	class:User
 setPassword	src/springbook/user/domain/User.java	/^	public void setPassword(String password) {$/;"	m	class:User
 springbook	src/springbook/UserDaoTest.java	/^package springbook;$/;"	p
 springbook.user.dao	src/springbook/user/dao/AccountDao.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/ConnectionMaker.java	/^package springbook.user.dao;$/;"	p
+springbook.user.dao	src/springbook/user/dao/CountingConnectionMaker.java	/^package springbook.user.dao;$/;"	p
+springbook.user.dao	src/springbook/user/dao/CountingDaoFactory.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/DConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/DaoFactory.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/MessageDao.java	/^package springbook.user.dao;$/;"	p
@@ -53,6 +64,7 @@ springbook.user.dao	src/springbook/user/dao/NConnectionMaker.java	/^package spri
 springbook.user.dao	src/springbook/user/dao/SimpleConnectionMaker.java	/^package springbook.user.dao;$/;"	p
 springbook.user.dao	src/springbook/user/dao/UserDao.java	/^package springbook.user.dao;$/;"	p
 springbook.user.domain	src/springbook/user/domain/User.java	/^package springbook.user.domain;$/;"	p
+userDao	src/springbook/user/dao/CountingDaoFactory.java	/^	public UserDao userDao(){$/;"	m	class:CountingDaoFactory
 userDao	src/springbook/user/dao/DaoFactory.java	/^	public UserDao userDao() {$/;"	m	class:DaoFactory
 users	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	t
 users.id	sql/create_users.sql	/^create table users ( id varchar(10) primary key, name varchar(20) not null, password varchar(10) not null);$/;"	F
